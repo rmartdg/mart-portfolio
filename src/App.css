@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #d0e7ff 0%, #ffffff 100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background 0.3s ease;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.mainDiv {
+    background: white;
+    width: 60%;
+    margin: 0 auto; /* Add this line to center it */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    color: black;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.leadDiv {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    margin: 0px 0px 5px 0px;
+    color: white;
+    border-radius: 20px;
+}
+
+.containerDiv {
+    padding: 10px 20px;
+    margin: 0px 0px 5px 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.containerDiv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.containerDiv img {
+    max-width: 300px;
+    height: auto;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.containerDiv h1, .containerDiv h2, .containerDiv h3 {
+    padding: 0px;
+    margin: 5px 0;
+}
+
+.infoSec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.headDiv, .descDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/* This is the line that fixes your giant icons! */
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.project-item {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 5px solid white;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-item h4 {
+    margin: 10px 0 0 0;
+    color: #444;
+}
+
+/* List arrows */
+ul li::before {
+    content: ">>>"; 
+    color: #854329;
+    padding-right: 10px;
+}
+
+@media (max-width: 1200px) {
+    .infoSec {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .mainDiv {
+        width: 90%;
+    }
+}
+
+/* --- DARK MODE STYLES --- */
+body.dark {
+    background: #000000; /* Pure black background */
+}
+
+.mainDiv.dark {
+    background: #000000; /* Pure black for the main card */
+    color: white;
+    /* Changed shadow to a subtle white glow so the card stands out from the background */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05); 
+}
+
+.mainDiv.dark .containerDiv {
+    /* Very dark gray for the inner boxes to give them just enough contrast */
+    background-color: #0a0a0a; 
+    border-color: #333333; 
+}
+
+.mainDiv.dark h2 span, .mainDiv.dark h4 {
+    color: #ff7e5f !important; /* Updated to match your orange gradient theme */
+}
+
+.theme-toggle {
+    background: #854329;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #ff7e5f;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
